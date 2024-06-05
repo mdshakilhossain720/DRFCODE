@@ -17,10 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from api import views
+from apitwo import views as ap
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('studntinfo/<int:pk>',views.student_details),
     path('std/',views.allstudent),
+    path('posts/',ap.studentcreate),
 
 ]
